@@ -63,8 +63,8 @@ ai-page-summarizer/
 
 **Option A — Clone via Git:**
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-page-summarizer.git
-cd ai-page-summarizer
+git clone https://github.com/FavieCodes/zen_AI.git
+cd zen_AI
 ```
 
 **Option B — Download ZIP:**
