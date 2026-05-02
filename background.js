@@ -1,15 +1,12 @@
-// background.js - Service Worker
-
 // ─── API KEYS ─────────────────────────────────────────────────────────────────
 const CLAUDE_API_KEY = '[ENCRYPTION_KEY]'; 
 const OPENAI_API_KEY = '[ENCRYPTION_KEY]';
 const GEMINI_API_KEY  = '[ENCRYPTION_KEY]';
 const GROQ_API_KEY = '[ENCRYPTION_KEY]';
 
-// ─── PROVIDER ORDER (tries each in sequence until one succeeds) ───────────────
+// ─── PROVIDER ORDER  ───────────────
 const PROVIDERS = ['claude', 'openai', 'gemini', 'groq'];
 
-// ─────────────────────────────────────────────────────────────────────────────
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'summarize') {
@@ -28,7 +25,7 @@ async function handleSummarize({ title, content, url }) {
     return { success: true, summary: cached[cacheKey], fromCache: true };
   }
 
-  // Try each provider in order, move to next if one fails
+  // Try each provider in order
   const errors = [];
 
   for (const provider of PROVIDERS) {
