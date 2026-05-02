@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZenAI Page Summarizer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ZenAI Summarizer</h1>
+    </header>
+
+    <div id="page-info">
+      <p id="page-title" class="page-title">Loading page info...</p>
+    </div>
+
+    <div id="actions">
+      <button id="summarize-btn" class="btn btn-primary">
+        ✦ Summarize Page
+      </button>
+      <button id="clear-btn" class="btn btn-secondary" style="display:none">
+        Clear
+      </button>
+    </div>
+
+    <div id="loading" style="display:none">
+      <div class="spinner"></div>
+      <p id="loading-text">Analyzing page content...</p>
+    </div>
+
+    <div id="error-box" style="display:none" class="error-box">
+      <p id="error-msg"></p>
+    </div>
+
+    <div id="summary-box" style="display:none">
+      <div class="section">
+        <h2>Summary</h2>
+        <ul id="summary-list"></ul>
+      </div>
+      <div class="section">
+        <h2>Key Insights</h2>
+        <ul id="insights-list"></ul>
+      </div>
+      <div id="tags-row" class="tags-row"></div>
+      <div class="meta-row">
+        <span id="reading-time"></span>
+        <span id="word-count"></span>
+        <span id="cache-badge" style="display:none" class="badge">Cached</span>
+      </div>
+      <div class="action-row">
+        <button id="copy-btn" class="btn btn-secondary">Copy Summary</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
