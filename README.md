@@ -70,7 +70,7 @@ cd zen_AI
 The extension needs to know where your backend is running. Open background.js and update the BACKEND_URL constant:
 
 ```javascript
-const BACKEND_URL = 'https://your-backend-url.com/api/summarize/';
+const BACKEND_URL = 'https://ai-summarizer-backend-gamma.vercel.app/api/summarize/';
 ```
 Note: For backend setup instructions (API keys, deployment, configuration), please refer to the AI Summarizer Backend Repository.
 
