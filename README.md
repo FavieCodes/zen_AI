@@ -57,6 +57,8 @@ ai-page-summarizer/
 ```bash
 git clone https://github.com/FavieCodes/zen_AI.git
 cd zen_AI
+git clone https://github.com/FavieCodes/zen_AI.git
+cd zen_AI
 ```
 
 **Option B — Download ZIP:**
