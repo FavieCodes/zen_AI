@@ -75,26 +75,31 @@ const BACKEND_URL = 'https://ai-summarizer-backend-gamma.vercel.app/api/summariz
 Note: For backend setup instructions (API keys, deployment, configuration), please refer to the AI Summarizer Backend Repository.
 
 ### Step 3 — Load the Extension into Chrome
+```
 Open Google Chrome
 Navigate to chrome://extensions/
 Toggle "Developer mode" ON (top-right corner)
 Click "Load unpacked"
 Select your ai-page-summarizer folder
 The extension appears in your list with its icon
+```
 
 ### Step 4 — Pin to Toolbar
+```
 Click the puzzle piece icon in the Chrome toolbar
 Find "ZenAI Page Summarizer"
 Click the pin icon next to it
+```
 
 ### Step 5 — Use It
+```
 Go to any news article, blog post, or documentation site
 Click the ZenAI icon in your toolbar
 Click "Summarize Page"
 Wait a few seconds for the summary to generate
 Read your detailed summary!
 Tip: Revisit the same page URL and the summary loads instantly from cache — no backend call needed.
-
+```
 ## 🏗️ Extension Architecture
 ```text
 CHROME BROWSER
@@ -157,6 +162,7 @@ The background service worker validates request.action === 'summarize' before pr
 content-script.js sets window.__aiSummarizerInjected = true on first run to prevent duplicate listeners.
 
 ## ⚖️ Design Decisions
+```
 Decision	Chosen Approach	Why
 API key storage	Backend server	Maximum security; users don't manage keys
 Content extraction	Custom DOM heuristic	Zero dependencies; works on 90%+ pages
@@ -165,7 +171,7 @@ Caching	chrome.storage.local	Instant repeat access; no wasted API calls
 AI response format	Strict JSON schema	Reliable parsing, clean UI rendering
 On-demand injection	Per click injection	Eliminates "receiving end does not exist" errors
 No build tools	Plain HTML/CSS/JS	Easy to inspect, load, and debug
-
+```
 ## 🐛 Troubleshooting
 **"Cannot summarize this page"**
 The extension cannot run on chrome:// pages or the Chrome Web Store. Navigate to a regular website.
@@ -239,6 +245,8 @@ Keyboard shortcut — Ctrl+Shift+S to summarize
 MIT License — free to use, modify, and distribute.
 
 ## 🙏 Acknowledgements
+```text
 Chrome Extensions Docs — Manifest V3 reference
 AI providers: Anthropic Claude, OpenAI, Google Gemini, Groq (integrated via backend)
+```
 
