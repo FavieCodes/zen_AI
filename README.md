@@ -225,6 +225,7 @@ Request format: The extension sends a POST request with:
 }
 ```
 ## 🛠️ Potential Improvements
+```
 Settings page — configure backend URL from UI
 Cache expiry — invalidate summaries after 24 hours
 Highlight mode — highlight key sentences on the webpage
@@ -232,6 +233,7 @@ Quick Summary mode — 3-bullet fast summaries
 PDF support — summarize PDFs in Chrome viewer
 Export to Markdown — save summaries as .md files
 Keyboard shortcut — Ctrl+Shift+S to summarize
+```
 
 ## 📄 License
 MIT License — free to use, modify, and distribute.
